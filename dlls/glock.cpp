@@ -19,6 +19,8 @@
 #include "monsters.h"
 #include "weapons.h"
 #include "player.h"
+#include <ggrenade.cpp>
+#include "../cl_dll/hl/hl_baseentity.cpp"
 
 LINK_ENTITY_TO_CLASS(weapon_glock, CGlock);
 LINK_ENTITY_TO_CLASS(weapon_9mmhandgun, CGlock);
@@ -96,7 +98,7 @@ void CGlock::GlockFire(float flSpread, float flCycleTime, bool fUseAutoAim)
 		{
 			PlayEmptySound();
 			m_flNextPrimaryAttack = m_flNextSecondaryAttack = GetNextAttackDelay(0.2);
-			Kill();
+			ALERT(at_console , "I`am shooting right now");
 			
 		}
 
@@ -166,7 +168,7 @@ void CGlock::Reload()
 	bool iResult;
 
 	if (m_iClip == 0)
-		iResult = DefaultReload(17, GLOCK_RELOAD, 1.0);
+		iResult = DefaultReload(17, GLOCK_RELOAD, 0.1);
 	else
 		iResult = DefaultReload(17, GLOCK_RELOAD_NOT_EMPTY, 1.5);
 
