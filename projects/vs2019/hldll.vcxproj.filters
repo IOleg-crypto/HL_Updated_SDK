@@ -620,5 +620,8 @@
     <ClInclude Include="..\..\public\interface.h">
       <Filter>Header Files\public</Filter>
     </ClInclude>
+    <ClInclude Include="LockCode.h">
+      <Filter>Header Files\dlls</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

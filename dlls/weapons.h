@@ -498,6 +498,7 @@ public:
 	bool GetItemInfo(ItemInfo* p) override;
 
 	void PrimaryAttack() override;
+	void AddToPlayer(); 
 	void SecondaryAttack() override;
 	void GlockFire(float flSpread, float flCycleTime, bool fUseAutoAim);
 	bool Deploy() override;

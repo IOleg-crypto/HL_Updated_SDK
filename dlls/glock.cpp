@@ -19,6 +19,7 @@
 #include "monsters.h"
 #include "weapons.h"
 #include "player.h"
+#include "explode.h"
 #define LockHLLib
 #ifndef LockHLLib  // unloaded library by define
 #include <ggrenade.cpp>
@@ -90,6 +91,7 @@ void CGlock::SecondaryAttack()
 void CGlock::PrimaryAttack()
 {
 	GlockFire(0.01, 0.3, true);
+
 }
 
 void CGlock::GlockFire(float flSpread, float flCycleTime, bool fUseAutoAim)
@@ -99,7 +101,7 @@ void CGlock::GlockFire(float flSpread, float flCycleTime, bool fUseAutoAim)
 		//if (m_fFireOnEmpty)
 		{
 			PlayEmptySound();
-			m_flNextPrimaryAttack = m_flNextSecondaryAttack = GetNextAttackDelay(0.2);
+			m_flNextPrimaryAttack = m_flNextSecondaryAttack = GetNextAttackDelay(0.1);
 			ALERT(at_console , "I`am shooting right now");
 			
 		}

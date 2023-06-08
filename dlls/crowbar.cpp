@@ -20,6 +20,7 @@
 #include "weapons.h"
 #include "player.h"
 #include "gamerules.h"
+#include "explode.h"
 
 
 #define CROWBAR_BODYHIT_VOLUME 128
@@ -145,7 +146,7 @@ void CCrowbar::Smack()
 
 void CCrowbar::SwingAgain()
 {
-	Swing(false);
+	Swing(true);  //changed from false to true
 }
 
 
@@ -173,6 +174,7 @@ bool CCrowbar::Swing(bool fFirst)
 			if (!pHit || pHit->IsBSPModel())
 				FindHullIntersection(vecSrc, tr, VEC_DUCK_HULL_MIN, VEC_DUCK_HULL_MAX, m_pPlayer->edict());
 			vecEnd = tr.vecEndPos; // This is the point on the actual surface (the hull could have hit space)
+			
 		}
 	}
 #endif
@@ -232,6 +234,7 @@ bool CCrowbar::Swing(bool fFirst)
 			// subsequent swings do half
 			pEntity->TraceAttack(m_pPlayer->pev, gSkillData.plrDmgCrowbar / 2, gpGlobals->v_forward, &tr, DMG_CLUB);
 		}
+		ExplosionCreate(tr.vecEndPos, g_vecZero, m_pPlayer->edict(), 200, true);
 		ApplyMultiDamage(m_pPlayer->pev, m_pPlayer->pev);
 
 #endif
