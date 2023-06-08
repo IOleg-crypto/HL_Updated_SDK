@@ -93,7 +93,7 @@ public:
 #define _357_MAX_CARRY 36
 #define BUCKSHOT_MAX_CARRY 125
 #define BOLT_MAX_CARRY 50
-#define ROCKET_MAX_CARRY 5
+#define ROCKET_MAX_CARRY 50 // changed capacity
 #define HANDGRENADE_MAX_CARRY 10
 #define SATCHEL_MAX_CARRY 5
 #define TRIPMINE_MAX_CARRY 5
@@ -104,7 +104,7 @@ public:
 // the maximum amount of ammo each weapon's clip can hold
 #define WEAPON_NOCLIP -1
 
-//#define CROWBAR_MAX_CLIP		WEAPON_NOCLIP
+#define CROWBAR_MAX_CLIP WEAPON_NOCLIP //undefined
 #define GLOCK_MAX_CLIP 17
 #define PYTHON_MAX_CLIP 6
 #define MP5_MAX_CLIP 50
