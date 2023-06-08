@@ -52,7 +52,7 @@
     <IntDir>$(SolutionDir)$(Configuration)\$(ProjectName)\int\</IntDir>
     <TargetName>hl</TargetName>
     <EnableClangTidyCodeAnalysis>true</EnableClangTidyCodeAnalysis>
-    <OutDir>$(SolutionDir)$(Configuration)\$(ProjectName)\</OutDir>
+    <OutDir>D:\HalfLife\Half-Life\mod_hl1\cl_dlls</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
