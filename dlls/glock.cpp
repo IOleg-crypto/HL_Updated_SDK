@@ -96,7 +96,7 @@ void CGlock::GlockFire(float flSpread, float flCycleTime, bool fUseAutoAim)
 		{
 			PlayEmptySound();
 			m_flNextPrimaryAttack = m_flNextSecondaryAttack = GetNextAttackDelay(0.2);
-			void Explode(Vector vecSrc, Vector vecAim);
+			Kill();
 			
 		}
 
