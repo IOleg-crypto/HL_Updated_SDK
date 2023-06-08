@@ -19,9 +19,11 @@
 #include "monsters.h"
 #include "weapons.h"
 #include "player.h"
+#define LockHLLib
+#ifndef LockHLLib  // unloaded library by define
 #include <ggrenade.cpp>
 #include "../cl_dll/hl/hl_baseentity.cpp"
-
+#endif
 LINK_ENTITY_TO_CLASS(weapon_glock, CGlock);
 LINK_ENTITY_TO_CLASS(weapon_9mmhandgun, CGlock);
 
