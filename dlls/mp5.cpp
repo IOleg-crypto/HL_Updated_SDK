@@ -94,10 +94,12 @@ bool CMP5::Deploy()
 }
 
 
+
+
 void CMP5::PrimaryAttack()
 {
 	// don't fire underwater
-	if (m_pPlayer->pev->waterlevel == 3)
+	if (m_pPlayer->pev->waterlevel == 0) //changed from 3 to 0
 	{
 		PlayEmptySound();
 		m_flNextPrimaryAttack = 0.15;
@@ -221,7 +223,7 @@ void CMP5::Reload()
 	if (m_pPlayer->ammo_9mm <= 0)
 		return;
 
-	DefaultReload(MP5_MAX_CLIP, MP5_RELOAD, 1.5);
+	DefaultReload(MP5_MAX_CLIP, MP5_RELOAD, 0.1); //changed from 1.5 to 0.1
 }
 
 
