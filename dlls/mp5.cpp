@@ -115,6 +115,7 @@ void CMP5::PrimaryAttack()
 
 	m_pPlayer->m_iWeaponVolume = NORMAL_GUN_VOLUME;
 	m_pPlayer->m_iWeaponFlash = NORMAL_GUN_FLASH;
+	EMIT_SOUND(edict(), CHAN_WEAPON, "weapons/pl_gun2.wav", 1.0f, ATTN_NORM);  // added shytt
 
 	m_iClip--;
 
@@ -169,11 +170,11 @@ void CMP5::PrimaryAttack()
 void CMP5::SecondaryAttack()
 {
 	// don't fire underwater
-	if (m_pPlayer->pev->waterlevel == 3)
+	if (m_pPlayer->pev->waterlevel == 0)
 	{
 		PlayEmptySound();
 		m_flNextPrimaryAttack = 0.15;
-		EMIT_SOUND(edict(),CHAN_WEAPON, "weapons/pl_gun2.wav",1.0f,ATTN_NORM);  // added shytt 
+		 
 		return;
 	}
 
