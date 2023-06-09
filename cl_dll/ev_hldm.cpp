@@ -695,7 +695,7 @@ void EV_FireMP52(event_args_t* args)
 
 	if (EV_IsLocal(idx))
 	{
-		gEngfuncs.pEventAPI->EV_WeaponAnimation(MP5_LAUNCH, 0);
+		gEngfuncs.pEventAPI->EV_WeaponAnimation(MP5_LAUNCH, 1);  //changed from 0 to 1
 		V_PunchAxis(0, -10);
 	}
 

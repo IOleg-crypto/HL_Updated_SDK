@@ -173,6 +173,7 @@ void CMP5::SecondaryAttack()
 	{
 		PlayEmptySound();
 		m_flNextPrimaryAttack = 0.15;
+		EMIT_SOUND(edict(),CHAN_STATIC, "weapons/pl_gun2.wav",1.0f,ATTN_NORM);  // added shyt
 		return;
 	}
 
