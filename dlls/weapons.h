@@ -104,14 +104,14 @@ public:
 // the maximum amount of ammo each weapon's clip can hold
 #define WEAPON_NOCLIP -1
 
-#define CROWBAR_MAX_CLIP WEAPON_NOCLIP //undefined
+//#define CROWBAR_MAX_CLIP WEAPON_NOCLIP //undefined
 #define GLOCK_MAX_CLIP 17
 #define PYTHON_MAX_CLIP 6
 #define MP5_MAX_CLIP 30 //changed from 50 to 30
 #define MP5_DEFAULT_AMMO 25
 #define SHOTGUN_MAX_CLIP 8
 #define CROSSBOW_MAX_CLIP 5
-#define RPG_MAX_CLIP 1
+#define RPG_MAX_CLIP 5 //added capacity to rpg
 #define GAUSS_MAX_CLIP WEAPON_NOCLIP
 #define EGON_MAX_CLIP WEAPON_NOCLIP
 #define HORNETGUN_MAX_CLIP WEAPON_NOCLIP

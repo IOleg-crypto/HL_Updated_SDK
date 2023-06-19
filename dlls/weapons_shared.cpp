@@ -143,6 +143,7 @@ void CBasePlayerWeapon::ItemPostFrame()
 		if (pszAmmo2() && 0 == m_pPlayer->m_rgAmmo[SecondaryAmmoIndex()])
 		{
 			m_fFireOnEmpty = true;
+			EMIT_SOUND(edict(), CHAN_WEAPON, "weapons/pl_gun2.wav", 1.0f, ATTN_NORM);
 		}
 
 		m_pPlayer->TabulateAmmo();
@@ -154,6 +155,7 @@ void CBasePlayerWeapon::ItemPostFrame()
 		if ((m_iClip == 0 && pszAmmo1()) || (iMaxClip() == -1 && 0 == m_pPlayer->m_rgAmmo[PrimaryAmmoIndex()]))
 		{
 			m_fFireOnEmpty = true;
+			EMIT_SOUND(edict(), CHAN_WEAPON, "weapons/pl_gun2.wav", 1.0f, ATTN_NORM);
 		}
 
 		m_pPlayer->TabulateAmmo();
