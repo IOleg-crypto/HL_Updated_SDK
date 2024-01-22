@@ -85,7 +85,9 @@ void CGlock::SecondaryAttack()
 
 void CGlock::PrimaryAttack()
 {
+	ALERT(at_co
 	GlockFire(0.01, 0.3, true);
+	
 }
 
 void CGlock::GlockFire(float flSpread, float flCycleTime, bool fUseAutoAim)
@@ -164,7 +166,7 @@ void CGlock::Reload()
 	bool iResult;
 
 	if (m_iClip == 0)
-		iResult = DefaultReload(17, GLOCK_RELOAD, 1.5);
+		iResult = DefaultReload(17, GLOCK_RELOAD, 0.1); //changed reload
 	else
 		iResult = DefaultReload(17, GLOCK_RELOAD_NOT_EMPTY, 1.5);
 

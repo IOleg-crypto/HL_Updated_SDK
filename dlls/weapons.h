@@ -105,9 +105,9 @@ public:
 #define WEAPON_NOCLIP -1
 
 //#define CROWBAR_MAX_CLIP		WEAPON_NOCLIP
-#define GLOCK_MAX_CLIP 17
+#define GLOCK_MAX_CLIP 25
 #define PYTHON_MAX_CLIP 6
-#define MP5_MAX_CLIP 50
+#define MP5_MAX_CLIP 100 //changed clip
 #define MP5_DEFAULT_AMMO 25
 #define SHOTGUN_MAX_CLIP 8
 #define CROSSBOW_MAX_CLIP 5
@@ -122,7 +122,7 @@ public:
 
 
 // the default amount of ammo that comes with each gun when it spawns
-#define GLOCK_DEFAULT_GIVE 17
+#define GLOCK_DEFAULT_GIVE 20
 #define PYTHON_DEFAULT_GIVE 6
 #define MP5_DEFAULT_GIVE 25
 #define MP5_DEFAULT_AMMO 25
